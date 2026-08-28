@@ -1,0 +1,10 @@
+project: savantenvs/pronto
+target: parse-fuzz
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parse-fuzz/testsuite
+
+cmds:
+  - cmd: /mayhem/parse-fuzz
+    libfuzzer: true
